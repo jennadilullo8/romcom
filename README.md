@@ -1,6 +1,7 @@
 
 # RomCom: An Application for the RomCom Enthusiast
 
+## Pair project during Module 1 at Turing School of Software and Design
 
 ## Contributors
 
@@ -22,11 +23,13 @@ In this project, an application was created where the user could make a RomCom c
 
 ## Wins
 
- - Developing a good understanding of how query selectors and event handlers work together.
+ - Developing a good understanding of how query selectors and event handlers work together
+ - Creating functionality when the user clicks on a button
 
 ## Challenges
 
  - Understanding which html elements we need for the DOM.
+ - Solving merge conflicts
 
 ## Technologies Used
 
