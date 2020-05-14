@@ -19,3 +19,13 @@ In this project, an application was created where the user could make a RomCom c
  - Understand event bubbling and use event delegation on dynamic elements
  - Begin to understand how to write effective, clean HTML & CSS
  - Consistently make commits and use proper git flow
+
+##Wins
+
+ - Developing a good understanding of how query selectors and event handlers work together.
+
+##Challenges
+
+ - Understanding which html elements we need for the DOM.
+
+ 
