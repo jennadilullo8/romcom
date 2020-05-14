@@ -34,3 +34,5 @@ In this project, an application was created where the user could make a RomCom c
  - CSS
  - JavaScript
  - Git/GitHub
+
+## In Action
