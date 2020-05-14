@@ -3,10 +3,6 @@ var updatedTitle = document.querySelector('.cover-title');
 var updatedDescriptorOne = document.querySelector('.tagline-1');
 var updatedDescriptorTwo = document.querySelector('.tagline-2');
 
-
- we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
-
-
 var savedCovers = [];
 
 var currentCover;
