@@ -11,12 +11,19 @@ var savedCovers = [];
 
 var currentCover;
 
-window.addEventListener('load', )
+window.addEventListener('load', generateRandomCover);
 
-// Create your eent handlers and other functions here 👇
-
-
-// We've provided one function to get you started
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+}
+
+function generateRandomCover() {
+  var randomCoverImage = covers[getRandomIndex(covers)];
+  var randomTitle = titles[getRandomIndex(titles)];
+  var randomDescriptorOne = descriptors[getRandomIndex(descriptors)];
+  var randomDescriptorTwo = descriptors[getRandomIndex(descriptors)];
+  updatedCoverImage.src = randomCoverImage;
+  updatedTitle.innerText = randomTitle;
+  updatedDescriptorOne.innerText = randomDescriptorOne;
+  updatedDescriptorTwo.innerText = randomDescriptorTwo;
 }
