@@ -47,3 +47,11 @@ The gif will show;
 - When the page loads, the user should see a cover with a randomized image, title, and two descriptors
 
 <img src="http://g.recordit.co/qaPpFs5QJL.gif" alt="Random Cover display" height=auto width=75%/>
+
+### Iteration 1
+
+The gif will show;
+
+- When the user clicks on the Show New Random Cover button, the page will display a new Rom Com cover
+
+<img src="http://g.recordit.co/wkghwFjKFi.gif" alt="Random Cover display when button is clicked" height=auto width=75%/>
