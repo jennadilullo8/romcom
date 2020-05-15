@@ -3,13 +3,11 @@ var updatedTitle = document.querySelector('.cover-title');
 var updatedDescriptorOne = document.querySelector('.tagline-1');
 var updatedDescriptorTwo = document.querySelector('.tagline-2');
 var randomCoverButton = document.querySelector('.random-cover-button');
-
 var mainCoverPage = document.querySelector('.home-view');
 var formViewPage = document.querySelector('.form-view');
 var makeOwnCoverButton = document.querySelector('.make-new-button');
 var saveCoverButton = document.querySelector('.save-cover-button');
-
-// When the Form view is visible, the “Home” button should be visible
+var homeButton = document.querySelector('.home-button');
 
 var savedCovers = [];
 
@@ -40,4 +38,5 @@ function viewMakeOwnForm() {
   mainCoverPage.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
+  homeButton.classList.remove('hidden');
 }
