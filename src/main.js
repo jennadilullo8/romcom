@@ -12,8 +12,6 @@ var viewSavedButton = document.querySelector('.view-saved-button');
 var savedViewPage = document.querySelector('.saved-view');
 
 
-// When the Saved Covers view is visible, the “Show New Random Cover” and “Save Cover” buttons should be hidden
-// When the Saved Covers view is visible, the “Home” button should be visible
 
 var savedCovers = [];
 
@@ -51,4 +49,7 @@ function viewMakeOwnForm() {
 function viewSavedCovers() {
   savedViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
+  randomCoverButton.classList.add('hidden');
+  saveCoverButton.classList.add('hidden');
+  homeButton.classList.remove('hidden');
 }
