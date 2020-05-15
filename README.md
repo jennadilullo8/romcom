@@ -25,11 +25,13 @@ In this project, an application was created where the user could make a RomCom c
 
  - Developing a good understanding of how query selectors and event handlers work together
  - Creating functionality when the user clicks on a button
+ - How to properly use the property of classList by adding or removing the class of hidden to certain elements
 
 ## Challenges
 
  - Understanding which html elements we need for the DOM.
  - Solving merge conflicts
+ - Making sure we as a team are looking through every aspect of the application for bugs
 
 ## Technologies Used
 
