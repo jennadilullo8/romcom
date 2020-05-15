@@ -54,6 +54,19 @@ The gif will show;
 
 The gif will show;
 
-- When the user clicks on the Show New Random Cover button, the page will display a new Rom Com cover
+- When the user clicks on the 'Show New Random Cover' button, the page will display a new Rom Com cover
 
-<img src="http://g.recordit.co/wkghwFjKFi.gif" alt="Random Cover display when button is clicked" height=auto width=75%/>
+<img src="http://g.recordit.co/wkghwFjKFi.gif" alt="Random Cover display when button is clicked" height=auto width=75
+
+### Iteration 2
+
+The gif will show;
+
+- When a user clicks the 'Make Your Own Cover' button, a couple things should happen:
+  - The form should be displayed
+  - The home page should be hidden
+  - The 'Show New Random Cover' and 'Save Cover' buttons should be hidden
+  - The 'Home' button should be displayed
+
+
+-
