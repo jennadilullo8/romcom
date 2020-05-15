@@ -4,12 +4,22 @@ var updatedDescriptorOne = document.querySelector('.tagline-1');
 var updatedDescriptorTwo = document.querySelector('.tagline-2');
 var randomCoverButton = document.querySelector('.random-cover-button');
 
+var mainCoverPage = document.querySelector('.home-view');
+var formViewPage = document.querySelector('.form-view');
+var makeOwnCoverButton = document.querySelector('.make-new-button');
+
+//
+// When a user clicks the “Make Your Own Cover” button, we should see the form, and the homepage view should be hidden
+// When the Form view is visible, the “Show New Random Cover” and “Save Cover” buttons should be hidden
+// When the Form view is visible, the “Home” button should be visible
+
 var savedCovers = [];
 
 var currentCover;
 
 window.addEventListener('load', generateRandomCover);
 randomCoverButton.addEventListener('click', generateRandomCover);
+makeOwnCoverButton.addEventListener('click', viewMakeOwnForm);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -25,4 +35,9 @@ function generateRandomCover() {
   updatedDescriptorOne.innerText = randomDescriptorOne;
   updatedDescriptorTwo.innerText = randomDescriptorTwo;
   currentCover = new Cover(randomCoverImage, randomTitle, randomDescriptorOne, randomDescriptorTwo);
+}
+
+function viewMakeOwnForm() {
+  formViewPage.classList.remove('hidden');
+  mainCoverPage.classList.add('hidden');
 }
