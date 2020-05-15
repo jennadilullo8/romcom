@@ -8,6 +8,12 @@ var formViewPage = document.querySelector('.form-view');
 var makeOwnCoverButton = document.querySelector('.make-new-button');
 var saveCoverButton = document.querySelector('.save-cover-button');
 var homeButton = document.querySelector('.home-button');
+var viewSavedButton = document.querySelector('.view-saved-button');
+var savedViewPage = document.querySelector('.saved-view');
+
+
+// When the Saved Covers view is visible, the “Show New Random Cover” and “Save Cover” buttons should be hidden
+// When the Saved Covers view is visible, the “Home” button should be visible
 
 var savedCovers = [];
 
@@ -16,6 +22,7 @@ var currentCover;
 window.addEventListener('load', generateRandomCover);
 randomCoverButton.addEventListener('click', generateRandomCover);
 makeOwnCoverButton.addEventListener('click', viewMakeOwnForm);
+viewSavedButton.addEventListener('click', viewSavedCovers)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -39,4 +46,9 @@ function viewMakeOwnForm() {
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+}
+
+function viewSavedCovers() {
+  savedViewPage.classList.remove('hidden');
+  mainCoverPage.classList.add('hidden');
 }
