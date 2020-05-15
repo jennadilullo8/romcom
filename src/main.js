@@ -48,6 +48,7 @@ function viewMakeOwnForm() {
 function viewSavedCovers() {
   savedViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
+  formViewPage.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
