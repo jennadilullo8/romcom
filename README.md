@@ -78,3 +78,5 @@ The gif will show;
   - The Home section should be displayed
   - The home button should be hidden
   - The 'Show New Random Cover' and 'Save Cover' buttons should be displayed
+
+  <img src="http://g.recordit.co/iiK1DTzH3r.gif" alt="Switch Views" height=auto width=75
