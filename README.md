@@ -68,9 +68,13 @@ The gif will show;
   - The 'Show New Random Cover' and 'Save Cover' buttons should be hidden
   - The 'Home' button should be displayed
 
-
 - When a user clicks the 'View Saved Covers' button, a couple things should happen:
   - The saved covers section should be displayed
   - The homepage should be hidden
   - The 'Show New Random Cover' and 'Save Cover' buttons should be hidden
   - The 'Home' button should be displayed
+
+- When a user clicks the 'Home' button, these items should happen to the home button:
+  - The Home section should be displayed
+  - The home button should be hidden
+  - The 'Show New Random Cover' and 'Save Cover' buttons should be displayed
