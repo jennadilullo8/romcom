@@ -11,8 +11,6 @@ var homeButton = document.querySelector('.home-button');
 var viewSavedButton = document.querySelector('.view-saved-button');
 var savedViewPage = document.querySelector('.saved-view');
 
-
-
 var savedCovers = [];
 
 var currentCover;
@@ -20,7 +18,8 @@ var currentCover;
 window.addEventListener('load', generateRandomCover);
 randomCoverButton.addEventListener('click', generateRandomCover);
 makeOwnCoverButton.addEventListener('click', viewMakeOwnForm);
-viewSavedButton.addEventListener('click', viewSavedCovers)
+viewSavedButton.addEventListener('click', viewSavedCovers);
+homeButton.addEventListener('click', viewHomePage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -52,4 +51,11 @@ function viewSavedCovers() {
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+}
+
+function viewHomePage() {
+  mainCoverPage.classList.remove('hidden');
+  homeButton.classList.add('hidden');
+  randomCoverButton.classList.remove('hidden');
+  saveCoverButton.classList.remove('hidden');
 }
