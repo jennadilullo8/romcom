@@ -7,10 +7,8 @@ var randomCoverButton = document.querySelector('.random-cover-button');
 var mainCoverPage = document.querySelector('.home-view');
 var formViewPage = document.querySelector('.form-view');
 var makeOwnCoverButton = document.querySelector('.make-new-button');
+var saveCoverButton = document.querySelector('.save-cover-button');
 
-//
-// When a user clicks the “Make Your Own Cover” button, we should see the form, and the homepage view should be hidden
-// When the Form view is visible, the “Show New Random Cover” and “Save Cover” buttons should be hidden
 // When the Form view is visible, the “Home” button should be visible
 
 var savedCovers = [];
@@ -40,4 +38,6 @@ function generateRandomCover() {
 function viewMakeOwnForm() {
   formViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
+  randomCoverButton.classList.add('hidden');
+  saveCoverButton.classList.add('hidden');
 }
