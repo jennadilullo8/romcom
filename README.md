@@ -8,6 +8,8 @@
  - Jenna Dilullo: https://github.com/jennadilullo8
  - Nicole Latifi: https://github.com/NicoleLatifi
 
+Performed the driver-navigator approach throughout the development of the entire project.
+
 ## About
 
 In this project, an application was created where the user could make a RomCom cover with a randomly selected image, title, and descriptors. That cover could then be saved if the user liked it as such. The user could also make their own cover with their own image, title, and descriptors. The user could then save the cover and see it in their saved Rom Coms section. If the user did not like that saved RomCom cover, they then could delete it.
@@ -26,12 +28,14 @@ In this project, an application was created where the user could make a RomCom c
  - Developing a good understanding of how query selectors and event handlers work together
  - Creating functionality when the user clicks on a button
  - How to properly use the property of classList by adding or removing the class of hidden to certain elements
+ - Used event.preventDefault() to prevent the homepage loading without using the input values for the displayed cover when clicking 'Make my book' button
 
 ## Challenges
 
  - Understanding which html elements we need for the DOM.
  - Solving merge conflicts
  - Making sure we as a team are looking through every aspect of the application for bugs
+ - Understanding when to use a class name (with a .) and when to use an id name (with a #) in querySelectors
 
 ## Technologies Used
 
@@ -56,7 +60,7 @@ The gif will show;
 
 - When the user clicks on the 'Show New Random Cover' button, the page will display a new Rom Com cover
 
-<img src="http://g.recordit.co/wkghwFjKFi.gif" alt="Random Cover display when button is clicked" height=auto width=75
+<img src="http://g.recordit.co/wkghwFjKFi.gif" alt="Random Cover display when button is clicked" height=auto width=75%/>
 
 ### Iteration 2
 
@@ -79,4 +83,13 @@ The gif will show;
   - The home button should be hidden
   - The 'Show New Random Cover' and 'Save Cover' buttons should be displayed
 
-  <img src="http://g.recordit.co/iiK1DTzH3r.gif" alt="Switch Views" height=auto width=75
+  <img src="http://g.recordit.co/iiK1DTzH3r.gif" alt="Switch Views" height=auto width=75%/>
+
+### Iteration 3
+
+- When a user is on the the Make Your Own Cover form, they can fill in the input fields and click the 'Make my book' button, the following will happen:
+  - The home section will be displayed
+  - A cover with the inputted cover image, title, and descriptors will be displayed
+  - The 'Save Cover' button will reappear
+
+  <img src="https://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
