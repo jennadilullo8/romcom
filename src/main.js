@@ -88,9 +88,11 @@ function displayFormSubmissionCover(event) {
 }
 
 function addSavedCover() {
-  savedCovers.push(currentCover);
+  if (savedCovers.includes(currentCover) != true) {
+    savedCovers.push(currentCover);
+  }
 }
 
-// If a user clicks the “Save Cover” more than once on a single cover, it will still only be saved once (no duplicates)
+
 // When a user clicks the “View Saved Covers” button, we should see the saved covers section
 // All the covers in the savedCovers array should be displayed in the saved covers section
