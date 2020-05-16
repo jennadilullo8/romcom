@@ -76,4 +76,5 @@ function displayFormSubmissionCover(event) {
   covers.push(inputCoverImage.value);
   titles.push(inputTitle.value);
   descriptors.push(inputDesc1.value, inputDesc2.value);
+  currentCover = new Cover(inputCoverImage.value, inputTitle.value, inputDesc1.value, inputDesc2.value);
 }
