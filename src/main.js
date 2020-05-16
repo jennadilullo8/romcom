@@ -10,10 +10,10 @@ var saveCoverButton = document.querySelector('.save-cover-button');
 var homeButton = document.querySelector('.home-button');
 var viewSavedButton = document.querySelector('.view-saved-button');
 var savedViewPage = document.querySelector('.saved-view');
-var iputCoverImage = document.querySelector('#user-cover');
-var inputTitle = document.querySelector('#user-title');
-var inputDesc1 = document.querySelector('#user-desc1');
-var inputDesc2 = document.querySelector('#user-desc2');
+var inputCoverImage = document.querySelector('#cover');
+var inputTitle = document.querySelector('#title');
+var inputDesc1 = document.querySelector('#descriptor1');
+var inputDesc2 = document.querySelector('#descriptor2');
 var makeMyBookButton = document.querySelector('.create-new-book-button')
 
 var savedCovers = [];
@@ -73,4 +73,7 @@ function displayFormSubmissionCover(event) {
   updatedTitle.innerText = inputTitle.value;
   updatedDescriptorOne.innerText = inputDesc1.value;
   updatedDescriptorTwo.innerText = inputDesc2.value;
+  covers.push(inputCoverImage.value);
+  titles.push(inputTitle.value);
+  descriptors.push(inputDesc1.value, inputDesc2.value);
 }
