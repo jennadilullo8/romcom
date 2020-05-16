@@ -25,6 +25,7 @@ randomCoverButton.addEventListener('click', generateRandomCover);
 makeOwnCoverButton.addEventListener('click', viewMakeOwnForm);
 viewSavedButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', viewHomePage);
+makeMyBookButton.addEventListener('click', displayFormSubmissionCover)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -64,4 +65,12 @@ function viewHomePage() {
   homeButton.classList.add('hidden');
   randomCoverButton.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
+}
+
+function displayFormSubmissionCover(event) {
+  event.preventDefault();
+  updatedCoverImage.src = inputCoverImage.value;
+  updatedTitle.innerText = inputTitle.value;
+  updatedDescriptorOne.innerText = inputDesc1.value;
+  updatedDescriptorTwo.innerText = inputDesc2.value;
 }
