@@ -15,6 +15,8 @@ var inputTitle = document.querySelector('#title');
 var inputDesc1 = document.querySelector('#descriptor1');
 var inputDesc2 = document.querySelector('#descriptor2');
 var makeMyBookButton = document.querySelector('.create-new-book-button');
+var savedCoversSection = document.querySelector('.saved-covers-section');
+
 
 var savedCovers = [];
 
@@ -90,6 +92,16 @@ function displayFormSubmissionCover(event) {
 function addSavedCover() {
   if (savedCovers.includes(currentCover) != true) {
     savedCovers.push(currentCover);
+  }
+}
+
+function savedCoversSection() {
+  if (savedCovers.length != 0) {
+    for (var i = 0; i < savedCovers.length; i++) {
+      viewSavedCovers.insertAdjacentHTML('afterbegin' `
+      `<div class='mini-cover' data-id=${savedCovers[i].id}
+      </div>)
+    }
   }
 }
 
