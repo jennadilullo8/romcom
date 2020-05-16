@@ -14,7 +14,7 @@ var inputCoverImage = document.querySelector('#cover');
 var inputTitle = document.querySelector('#title');
 var inputDesc1 = document.querySelector('#descriptor1');
 var inputDesc2 = document.querySelector('#descriptor2');
-var makeMyBookButton = document.querySelector('.create-new-book-button')
+var makeMyBookButton = document.querySelector('.create-new-book-button');
 
 var savedCovers = [];
 
@@ -25,7 +25,8 @@ randomCoverButton.addEventListener('click', generateRandomCover);
 makeOwnCoverButton.addEventListener('click', viewMakeOwnForm);
 viewSavedButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', viewHomePage);
-makeMyBookButton.addEventListener('click', displayFormSubmissionCover)
+makeMyBookButton.addEventListener('click', displayFormSubmissionCover);
+saveCoverButton.addEventListener('click', addSavedCover);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -85,3 +86,8 @@ function displayFormSubmissionCover(event) {
   mainCoverPage.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
 }
+
+// When a user clicks the “Save Cover” button, the current cover will be added to the savedCovers array
+// If a user clicks the “Save Cover” more than once on a single cover, it will still only be saved once (no duplicates)
+// When a user clicks the “View Saved Covers” button, we should see the saved covers section
+// All the covers in the savedCovers array should be displayed in the saved covers section
