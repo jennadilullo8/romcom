@@ -49,6 +49,10 @@ function viewMakeOwnForm() {
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+  inputCoverImage.value = '';
+  inputTitle.value = '';
+  inputDesc1.value = '';
+  inputDesc2.value = '';
 }
 
 function viewSavedCovers() {
@@ -79,4 +83,5 @@ function displayFormSubmissionCover(event) {
   currentCover = new Cover(inputCoverImage.value, inputTitle.value, inputDesc1.value, inputDesc2.value);
   formViewPage.classList.add('hidden');
   mainCoverPage.classList.remove('hidden');
+  saveCoverButton.classList.remove('hidden');
 }
