@@ -56,7 +56,7 @@ The gif will show;
 
 - When the user clicks on the 'Show New Random Cover' button, the page will display a new Rom Com cover
 
-<img src="http://g.recordit.co/wkghwFjKFi.gif" alt="Random Cover display when button is clicked" height=auto width=75
+<img src="http://g.recordit.co/wkghwFjKFi.gif" alt="Random Cover display when button is clicked" height=auto width=75%/>
 
 ### Iteration 2
 
@@ -79,4 +79,13 @@ The gif will show;
   - The home button should be hidden
   - The 'Show New Random Cover' and 'Save Cover' buttons should be displayed
 
-  <img src="http://g.recordit.co/iiK1DTzH3r.gif" alt="Switch Views" height=auto width=75
+  <img src="http://g.recordit.co/iiK1DTzH3r.gif" alt="Switch Views" height=auto width=75%/>
+
+### Iteration 3
+
+- When a user is on the the Make Your Own Cover form, they can fill in the input fields and click the 'Make my book' button, the following will happen:
+  - The home section will be displayed
+  - A cover with the inputted cover image, title, and descriptors will be displayed
+  - The 'Save Cover' button will reappear
+
+  <img src="https://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
