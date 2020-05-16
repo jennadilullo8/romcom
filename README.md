@@ -8,6 +8,8 @@
  - Jenna Dilullo: https://github.com/jennadilullo8
  - Nicole Latifi: https://github.com/NicoleLatifi
 
+Performed the driver-navigator approach throughout the development of the entire project.
+
 ## About
 
 In this project, an application was created where the user could make a RomCom cover with a randomly selected image, title, and descriptors. That cover could then be saved if the user liked it as such. The user could also make their own cover with their own image, title, and descriptors. The user could then save the cover and see it in their saved Rom Coms section. If the user did not like that saved RomCom cover, they then could delete it.
@@ -26,12 +28,14 @@ In this project, an application was created where the user could make a RomCom c
  - Developing a good understanding of how query selectors and event handlers work together
  - Creating functionality when the user clicks on a button
  - How to properly use the property of classList by adding or removing the class of hidden to certain elements
+ - Used event.preventDefault() to prevent the homepage loading without using the input values for the displayed cover when clicking 'Make my book' button
 
 ## Challenges
 
  - Understanding which html elements we need for the DOM.
  - Solving merge conflicts
  - Making sure we as a team are looking through every aspect of the application for bugs
+ - Understanding when to use a class name (with a .) and when to use an id name (with a #) in querySelectors
 
 ## Technologies Used
 
