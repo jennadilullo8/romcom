@@ -10,6 +10,11 @@ var saveCoverButton = document.querySelector('.save-cover-button');
 var homeButton = document.querySelector('.home-button');
 var viewSavedButton = document.querySelector('.view-saved-button');
 var savedViewPage = document.querySelector('.saved-view');
+var iputCoverImage = document.querySelector('#user-cover');
+var inputTitle = document.querySelector('#user-title');
+var inputDesc1 = document.querySelector('#user-desc1');
+var inputDesc2 = document.querySelector('#user-desc2');
+var makeMyBookButton = document.querySelector('.create-new-book-button')
 
 var savedCovers = [];
 
