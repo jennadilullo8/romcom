@@ -77,4 +77,6 @@ function displayFormSubmissionCover(event) {
   titles.push(inputTitle.value);
   descriptors.push(inputDesc1.value, inputDesc2.value);
   currentCover = new Cover(inputCoverImage.value, inputTitle.value, inputDesc1.value, inputDesc2.value);
+  formViewPage.classList.add('hidden');
+  mainCoverPage.classList.remove('hidden');
 }
