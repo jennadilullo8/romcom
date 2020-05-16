@@ -10,6 +10,11 @@ var saveCoverButton = document.querySelector('.save-cover-button');
 var homeButton = document.querySelector('.home-button');
 var viewSavedButton = document.querySelector('.view-saved-button');
 var savedViewPage = document.querySelector('.saved-view');
+var inputCoverImage = document.querySelector('#cover');
+var inputTitle = document.querySelector('#title');
+var inputDesc1 = document.querySelector('#descriptor1');
+var inputDesc2 = document.querySelector('#descriptor2');
+var makeMyBookButton = document.querySelector('.create-new-book-button')
 
 var savedCovers = [];
 
@@ -20,6 +25,7 @@ randomCoverButton.addEventListener('click', generateRandomCover);
 makeOwnCoverButton.addEventListener('click', viewMakeOwnForm);
 viewSavedButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', viewHomePage);
+makeMyBookButton.addEventListener('click', displayFormSubmissionCover)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -43,6 +49,10 @@ function viewMakeOwnForm() {
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+  inputCoverImage.value = '';
+  inputTitle.value = '';
+  inputDesc1.value = '';
+  inputDesc2.value = '';
 }
 
 function viewSavedCovers() {
@@ -58,5 +68,20 @@ function viewHomePage() {
   mainCoverPage.classList.remove('hidden');
   homeButton.classList.add('hidden');
   randomCoverButton.classList.remove('hidden');
+  saveCoverButton.classList.remove('hidden');
+}
+
+function displayFormSubmissionCover(event) {
+  event.preventDefault();
+  updatedCoverImage.src = inputCoverImage.value;
+  updatedTitle.innerText = inputTitle.value;
+  updatedDescriptorOne.innerText = inputDesc1.value;
+  updatedDescriptorTwo.innerText = inputDesc2.value;
+  covers.push(inputCoverImage.value);
+  titles.push(inputTitle.value);
+  descriptors.push(inputDesc1.value, inputDesc2.value);
+  currentCover = new Cover(inputCoverImage.value, inputTitle.value, inputDesc1.value, inputDesc2.value);
+  formViewPage.classList.add('hidden');
+  mainCoverPage.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
 }
