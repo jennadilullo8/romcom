@@ -29,6 +29,7 @@ viewSavedButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', viewHomePage);
 makeMyBookButton.addEventListener('click', displayFormSubmissionCover);
 saveCoverButton.addEventListener('click', addSavedCover);
+savedCoversSection.addEventListener('dblclick', deleteSavedCover);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -110,5 +111,15 @@ function displaySavedCovers() {
       <img class="price-tag" src="./assets/price.png">
       <img class="overlay" src="./assets/overlay.png">
       </section> `)
+  }
+}
+
+function deleteSavedCover(event) {
+  var closestCover = event.target.closest('.mini-cover');
+  for (var i = 0; i < savedCovers.length; i++) {
+    if (savedCovers[i].id == closestCover.dataset.id) {
+      savedCovers.splice(i, 1);
+    }
+  viewSavedCovers();
   }
 }
