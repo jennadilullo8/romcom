@@ -116,6 +116,10 @@ function displaySavedCovers() {
 
 function deleteSavedCover(event) {
   var closestCover = event.target.closest('.mini-cover');
-
-  //for loop, if savedCovers[i].id === that variable, splice it from the savedCovers array
+  for (var i = 0; i < savedCovers.length; i++) {
+    if (savedCovers[i].id == closestCover.dataset.id) {
+      savedCovers.splice(i, 1);
+    }
+  viewSavedCovers();
+  }
 }
