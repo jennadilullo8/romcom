@@ -75,6 +75,8 @@ function viewHomePage() {
   homeButton.classList.add('hidden');
   randomCoverButton.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
+  formViewPage.classList.add('hidden');
+  savedViewPage.classList.add('hidden');
 }
 
 function displayFormSubmissionCover(event) {
@@ -112,7 +114,3 @@ function displaySavedCovers() {
     }
   }
 }
-
-
-// When a user clicks the “View Saved Covers” button, we should see the saved covers section
-// All the covers in the savedCovers array should be displayed in the saved covers section
