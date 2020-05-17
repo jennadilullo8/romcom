@@ -49,6 +49,7 @@ function generateRandomCover() {
 function viewMakeOwnForm() {
   formViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
+  savedViewPage.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
@@ -59,12 +60,14 @@ function viewMakeOwnForm() {
 }
 
 function viewSavedCovers() {
+  savedCoversSection.innerHTML = '';
   savedViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
   formViewPage.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+  displaySavedCovers();
 }
 
 function viewHomePage() {
@@ -95,12 +98,17 @@ function addSavedCover() {
   }
 }
 
-function savedCoversSection() {
+function displaySavedCovers() {
   if (savedCovers.length != 0) {
     for (var i = 0; i < savedCovers.length; i++) {
-      viewSavedCovers.insertAdjacentHTML('afterbegin' `
-      `<div class='mini-cover' data-id=${savedCovers[i].id}
-      </div>)
+      savedCoversSection.insertAdjacentHTML('afterbegin', `
+      <section class='mini-cover' data-id=${savedCovers[i].id}>
+      <img class='cover-image' src=${savedCovers[i].cover}>
+      <h2 class='cover-title'>${savedCovers[i].title}</h2>
+      <h3 class='tagline'>A tale of ${savedCovers[i].tagline1} and ${savedCovers[i].tagline2}</h3>
+      <img class="price-tag" src="./assets/price.png">
+      <img class="overlay" src="./assets/overlay.png">
+      </section> `)
     }
   }
 }
