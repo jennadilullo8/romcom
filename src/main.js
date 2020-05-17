@@ -14,7 +14,9 @@ var inputCoverImage = document.querySelector('#cover');
 var inputTitle = document.querySelector('#title');
 var inputDesc1 = document.querySelector('#descriptor1');
 var inputDesc2 = document.querySelector('#descriptor2');
-var makeMyBookButton = document.querySelector('.create-new-book-button')
+var makeMyBookButton = document.querySelector('.create-new-book-button');
+var savedCoversSection = document.querySelector('.saved-covers-section');
+
 
 var savedCovers = [];
 
@@ -25,7 +27,8 @@ randomCoverButton.addEventListener('click', generateRandomCover);
 makeOwnCoverButton.addEventListener('click', viewMakeOwnForm);
 viewSavedButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', viewHomePage);
-makeMyBookButton.addEventListener('click', displayFormSubmissionCover)
+makeMyBookButton.addEventListener('click', displayFormSubmissionCover);
+saveCoverButton.addEventListener('click', addSavedCover);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -46,6 +49,7 @@ function generateRandomCover() {
 function viewMakeOwnForm() {
   formViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
+  savedViewPage.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
@@ -56,12 +60,14 @@ function viewMakeOwnForm() {
 }
 
 function viewSavedCovers() {
+  savedCoversSection.innerHTML = '';
   savedViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
   formViewPage.classList.add('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+  displaySavedCovers();
 }
 
 function viewHomePage() {
@@ -69,6 +75,8 @@ function viewHomePage() {
   homeButton.classList.add('hidden');
   randomCoverButton.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
+  formViewPage.classList.add('hidden');
+  savedViewPage.classList.add('hidden');
 }
 
 function displayFormSubmissionCover(event) {
@@ -84,4 +92,23 @@ function displayFormSubmissionCover(event) {
   formViewPage.classList.add('hidden');
   mainCoverPage.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
+}
+
+function addSavedCover() {
+  if (savedCovers.includes(currentCover) != true) {
+    savedCovers.push(currentCover);
+  }
+}
+
+function displaySavedCovers() {
+    for (var i = 0; i < savedCovers.length; i++) {
+      savedCoversSection.insertAdjacentHTML('afterbegin', `
+      <section class='mini-cover' data-id=${savedCovers[i].id}>
+      <img class='cover-image' src=${savedCovers[i].cover}>
+      <h2 class='cover-title'>${savedCovers[i].title}</h2>
+      <h3 class='tagline'>A tale of ${savedCovers[i].tagline1} and ${savedCovers[i].tagline2}</h3>
+      <img class="price-tag" src="./assets/price.png">
+      <img class="overlay" src="./assets/overlay.png">
+      </section> `)
+  }
 }
