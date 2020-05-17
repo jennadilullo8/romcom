@@ -101,7 +101,6 @@ function addSavedCover() {
 }
 
 function displaySavedCovers() {
-  if (savedCovers.length != 0) {
     for (var i = 0; i < savedCovers.length; i++) {
       savedCoversSection.insertAdjacentHTML('afterbegin', `
       <section class='mini-cover' data-id=${savedCovers[i].id}>
@@ -111,6 +110,5 @@ function displaySavedCovers() {
       <img class="price-tag" src="./assets/price.png">
       <img class="overlay" src="./assets/overlay.png">
       </section> `)
-    }
   }
 }
