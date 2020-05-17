@@ -92,4 +92,11 @@ The gif will show;
   - A cover with the inputted cover image, title, and descriptors will be displayed
   - The 'Save Cover' button will reappear
 
-  <img src="https://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
+  <img src="http://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
+
+### Iteration 4
+
+  - When a user clicks the 'Save Cover' button, the cover that is currently displayed will be added to Saved Covers Section. If the cover is already saved, it will not save again to prevent any duplicates.
+  - When a user clicks the 'View Saved Covers' button, the saved covers will be displayed.
+
+  <img src="http://g.recordit.co/8HSihjz54a.gif" alt="Save covers and display saved covers." height=auto width=75%/>
