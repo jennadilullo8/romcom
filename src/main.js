@@ -29,6 +29,7 @@ viewSavedButton.addEventListener('click', viewSavedCovers);
 homeButton.addEventListener('click', viewHomePage);
 makeMyBookButton.addEventListener('click', displayFormSubmissionCover);
 saveCoverButton.addEventListener('click', addSavedCover);
+savedCoversSection.addEventListener('dblclick', deleteSavedCover);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -111,4 +112,10 @@ function displaySavedCovers() {
       <img class="overlay" src="./assets/overlay.png">
       </section> `)
   }
+}
+
+function deleteSavedCover(event) {
+  var closestCover = event.target.closest('.mini-cover');
+
+  //for loop, if savedCovers[i].id === that variable, splice it from the savedCovers array
 }
