@@ -29,6 +29,7 @@ In this project, an application was created where the user could make a RomCom c
  - Creating functionality when the user clicks on a button
  - How to properly use the property of classList by adding or removing the class of hidden to certain elements
  - Used event.preventDefault() to prevent the homepage loading without using the input values for the displayed cover when clicking 'Make my book' button
+ - Understanding how insertAdjacentHTML is used to insert our own HTML
 
 ## Challenges
 
@@ -36,6 +37,7 @@ In this project, an application was created where the user could make a RomCom c
  - Solving merge conflicts
  - Making sure we as a team are looking through every aspect of the application for bugs
  - Understanding when to use a class name (with a .) and when to use an id name (with a #) in querySelectors
+ - Including all of the correct classes in the HTML elements so that saved covers display properly
 
 ## Technologies Used
 
@@ -87,9 +89,20 @@ The gif will show;
 
 ### Iteration 3
 
+The gif will show;
+
 - When a user is on the the Make Your Own Cover form, they can fill in the input fields and click the 'Make my book' button, the following will happen:
   - The home section will be displayed
   - A cover with the inputted cover image, title, and descriptors will be displayed
   - The 'Save Cover' button will reappear
 
-  <img src="https://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
+  <img src="http://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
+
+### Iteration 4
+
+The gif will show;
+
+  - When a user clicks the 'Save Cover' button, the cover that is currently displayed will be added to Saved Covers Section. If the cover is already saved, it will not save again to prevent any duplicates.
+  - When a user clicks the 'View Saved Covers' button, the saved covers will be displayed.
+
+  <img src="http://g.recordit.co/8HSihjz54a.gif" alt="Save covers and display saved covers." height=auto width=75%/>
