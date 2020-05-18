@@ -37,7 +37,7 @@ In this project, an application was created where the user could make a RomCom c
  - Solving merge conflicts
  - Making sure we as a team are looking through every aspect of the application for bugs
  - Understanding when to use a class name (with a .) and when to use an id name (with a #) in querySelectors
- - Including all of the correct classes in the HTML elements so that saved covers display properly
+ - Including all of the correct classes in the HTML elements so that the saved covers display properly
 
 ## Technologies Used
 
@@ -81,11 +81,11 @@ The gif will show;
   - The 'Home' button should be displayed
 
 - When a user clicks the 'Home' button, these items should happen to the home button:
-  - The Home section should be displayed
-  - The home button should be hidden
+  - The home section should be displayed
+  - The 'Home' button should be hidden
   - The 'Show New Random Cover' and 'Save Cover' buttons should be displayed
 
-  <img src="http://g.recordit.co/iiK1DTzH3r.gif" alt="Switch Views" height=auto width=75%/>
+<img src="http://g.recordit.co/iiK1DTzH3r.gif" alt="Switch Views" height=auto width=75%/>
 
 ### Iteration 3
 
@@ -96,13 +96,21 @@ The gif will show;
   - A cover with the inputted cover image, title, and descriptors will be displayed
   - The 'Save Cover' button will reappear
 
-  <img src="http://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
+<img src="http://g.recordit.co/HtOzQqw1zw.gif" alt="Create own cover." height=auto width=75%/>
 
 ### Iteration 4
 
 The gif will show;
 
-  - When a user clicks the 'Save Cover' button, the cover that is currently displayed will be added to Saved Covers Section. If the cover is already saved, it will not save again to prevent any duplicates.
-  - When a user clicks the 'View Saved Covers' button, the saved covers will be displayed.
+- When a user clicks the 'Save Cover' button, the cover that is currently displayed will be added to Saved Covers Section. If the cover is already saved, it will not save again to prevent any duplicates.
+- When a user clicks the 'View Saved Covers' button, the saved covers will be displayed.
 
-  <img src="http://g.recordit.co/8HSihjz54a.gif" alt="Save covers and display saved covers." height=auto width=75%/>
+<img src="http://g.recordit.co/8HSihjz54a.gif" alt="Save covers and display saved covers." height=auto width=75%/>
+
+### Iteration 5
+
+The gif will show;
+
+- When a user double clicks on a saved poster, the poster will be deleted.
+
+<img src="http://g.recordit.co/3NKlkka58x.gif" alt="Save covers and display saved covers." height=auto width=75%/>
