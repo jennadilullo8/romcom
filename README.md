@@ -30,6 +30,7 @@ In this project, an application was created where the user could make a RomCom c
  - How to properly use the property of classList by adding or removing the class of hidden to certain elements
  - Used event.preventDefault() to prevent the homepage loading without using the input values for the displayed cover when clicking 'Make my book' button
  - Understanding how insertAdjacentHTML is used to insert our own HTML
+ - Created additional functions to DRY up our code
 
 ## Challenges
 
@@ -38,6 +39,7 @@ In this project, an application was created where the user could make a RomCom c
  - Making sure we as a team are looking through every aspect of the application for bugs
  - Understanding when to use a class name (with a .) and when to use an id name (with a #) in querySelectors
  - Including all of the correct classes in the HTML elements so that the saved covers display properly
+ - We did not use the property of '.toggle' when refactoring, because it wasn't fully understood between both partners
 
 ## Technologies Used
 
