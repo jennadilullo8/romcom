@@ -48,12 +48,14 @@ function generateRandomCover() {
 }
 
 function viewMakeOwnForm() {
-  formViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
   savedViewPage.classList.add('hidden');
-  randomCoverButton.classList.add('hidden');
-  saveCoverButton.classList.add('hidden');
-  homeButton.classList.remove('hidden');
+  formViewPage.classList.remove('hidden');
+  clearInputFields();
+  hideAndDisplayButtons()
+}
+
+function clearInputFields() {
   inputCoverImage.value = '';
   inputTitle.value = '';
   inputDesc1.value = '';
@@ -65,10 +67,14 @@ function viewSavedCovers() {
   savedViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
   formViewPage.classList.add('hidden');
+  displaySavedCovers();
+  hideAndDisplayButtons()
+}
+
+function hideAndDisplayButtons() {
+  homeButton.classList.remove('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
-  homeButton.classList.remove('hidden');
-  displaySavedCovers();
 }
 
 function viewHomePage() {
@@ -86,13 +92,17 @@ function displayFormSubmissionCover(event) {
   updatedTitle.innerText = inputTitle.value;
   updatedDescriptorOne.innerText = inputDesc1.value;
   updatedDescriptorTwo.innerText = inputDesc2.value;
-  covers.push(inputCoverImage.value);
-  titles.push(inputTitle.value);
-  descriptors.push(inputDesc1.value, inputDesc2.value);
   currentCover = new Cover(inputCoverImage.value, inputTitle.value, inputDesc1.value, inputDesc2.value);
   formViewPage.classList.add('hidden');
   mainCoverPage.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
+  addValuesToArray();
+}
+
+function addValuesToArray() {
+  covers.push(inputCoverImage.value);
+  titles.push(inputTitle.value);
+  descriptors.push(inputDesc1.value, inputDesc2.value);
 }
 
 function addSavedCover() {
@@ -120,6 +130,6 @@ function deleteSavedCover(event) {
     if (savedCovers[i].id == closestCover.dataset.id) {
       savedCovers.splice(i, 1);
     }
-  viewSavedCovers();
   }
+  viewSavedCovers();
 }
