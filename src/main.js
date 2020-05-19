@@ -90,13 +90,17 @@ function displayFormSubmissionCover(event) {
   updatedTitle.innerText = inputTitle.value;
   updatedDescriptorOne.innerText = inputDesc1.value;
   updatedDescriptorTwo.innerText = inputDesc2.value;
-  covers.push(inputCoverImage.value);
-  titles.push(inputTitle.value);
-  descriptors.push(inputDesc1.value, inputDesc2.value);
   currentCover = new Cover(inputCoverImage.value, inputTitle.value, inputDesc1.value, inputDesc2.value);
   formViewPage.classList.add('hidden');
   mainCoverPage.classList.remove('hidden');
   saveCoverButton.classList.remove('hidden');
+  addValuesToArray();
+}
+
+function addValuesToArray() {
+  covers.push(inputCoverImage.value);
+  titles.push(inputTitle.value);
+  descriptors.push(inputDesc1.value, inputDesc2.value);
 }
 
 function addSavedCover() {
