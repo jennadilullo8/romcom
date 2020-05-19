@@ -1,7 +1,7 @@
 
 # RomCom: An Application for the RomCom Enthusiast
 
-## Pair project during Module 1 at Turing School of Software and Design
+## Pair project from 5/12/20 - 5/19/20 of Module 1 at Turing School of Software and Design
 
 ## Contributors
 
@@ -13,6 +13,13 @@ Performed the driver-navigator approach throughout the development of the entire
 ## About
 
 In this project, an application was created where the user could make a RomCom cover with a randomly selected image, title, and descriptors. That cover could then be saved if the user liked it as such. The user could also make their own cover with their own image, title, and descriptors. The user could then save the cover and see it in their saved Rom Coms section. If the user did not like that saved RomCom cover, they then could delete it.
+
+## Setup
+
+- Fork and clone down this repository
+- `cd` into the repository
+- In Terminal enter the command: `open index.html`
+- Have fun!
 
 ## Learning Goals
 
@@ -30,6 +37,7 @@ In this project, an application was created where the user could make a RomCom c
  - How to properly use the property of classList by adding or removing the class of hidden to certain elements
  - Used event.preventDefault() to prevent the homepage loading without using the input values for the displayed cover when clicking 'Make my book' button
  - Understanding how insertAdjacentHTML is used to insert our own HTML
+ - Created additional functions to DRY up our code
 
 ## Challenges
 
@@ -38,6 +46,7 @@ In this project, an application was created where the user could make a RomCom c
  - Making sure we as a team are looking through every aspect of the application for bugs
  - Understanding when to use a class name (with a .) and when to use an id name (with a #) in querySelectors
  - Including all of the correct classes in the HTML elements so that the saved covers display properly
+ - We did not use the property of '.toggle' when refactoring, because it wasn't fully understood between both partners
 
 ## Technologies Used
 
