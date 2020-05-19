@@ -54,6 +54,10 @@ function viewMakeOwnForm() {
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
   homeButton.classList.remove('hidden');
+  clearInputFields();
+}
+
+function clearInputFields() {
   inputCoverImage.value = '';
   inputTitle.value = '';
   inputDesc1.value = '';
@@ -120,6 +124,6 @@ function deleteSavedCover(event) {
     if (savedCovers[i].id == closestCover.dataset.id) {
       savedCovers.splice(i, 1);
     }
-  viewSavedCovers();
   }
+  viewSavedCovers();
 }
