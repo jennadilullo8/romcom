@@ -48,13 +48,11 @@ function generateRandomCover() {
 }
 
 function viewMakeOwnForm() {
-  formViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
   savedViewPage.classList.add('hidden');
-  randomCoverButton.classList.add('hidden');
-  saveCoverButton.classList.add('hidden');
-  homeButton.classList.remove('hidden');
+  formViewPage.classList.remove('hidden');
   clearInputFields();
+  hideAndDisplayButtons()
 }
 
 function clearInputFields() {
@@ -69,10 +67,14 @@ function viewSavedCovers() {
   savedViewPage.classList.remove('hidden');
   mainCoverPage.classList.add('hidden');
   formViewPage.classList.add('hidden');
+  displaySavedCovers();
+  hideAndDisplayButtons()
+}
+
+function hideAndDisplayButtons() {
+  homeButton.classList.remove('hidden');
   randomCoverButton.classList.add('hidden');
   saveCoverButton.classList.add('hidden');
-  homeButton.classList.remove('hidden');
-  displaySavedCovers();
 }
 
 function viewHomePage() {
