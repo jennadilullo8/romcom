@@ -17,7 +17,6 @@ var inputDesc2 = document.querySelector('#descriptor2');
 var makeMyBookButton = document.querySelector('.create-new-book-button');
 var savedCoversSection = document.querySelector('.saved-covers-section');
 
-
 var savedCovers = [];
 
 var currentCover;
@@ -35,16 +34,20 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+function displayCovers() {
+  updatedCoverImage.src = currentCover.cover;
+  updatedTitle.innerText = currentCover.title;
+  updatedDescriptorOne.innerText = currentCover.tagline1;
+  updatedDescriptorTwo.innerText = currentCover.tagline2;
+}
+
 function generateRandomCover() {
   var randomCoverImage = covers[getRandomIndex(covers)];
   var randomTitle = titles[getRandomIndex(titles)];
   var randomDescriptorOne = descriptors[getRandomIndex(descriptors)];
   var randomDescriptorTwo = descriptors[getRandomIndex(descriptors)];
-  updatedCoverImage.src = randomCoverImage;
-  updatedTitle.innerText = randomTitle;
-  updatedDescriptorOne.innerText = randomDescriptorOne;
-  updatedDescriptorTwo.innerText = randomDescriptorTwo;
   currentCover = new Cover(randomCoverImage, randomTitle, randomDescriptorOne, randomDescriptorTwo);
+  displayCovers();
 }
 
 function viewMakeOwnForm() {
@@ -88,14 +91,9 @@ function viewHomePage() {
 
 function displayFormSubmissionCover(event) {
   event.preventDefault();
-  updatedCoverImage.src = inputCoverImage.value;
-  updatedTitle.innerText = inputTitle.value;
-  updatedDescriptorOne.innerText = inputDesc1.value;
-  updatedDescriptorTwo.innerText = inputDesc2.value;
   currentCover = new Cover(inputCoverImage.value, inputTitle.value, inputDesc1.value, inputDesc2.value);
-  formViewPage.classList.add('hidden');
-  mainCoverPage.classList.remove('hidden');
-  saveCoverButton.classList.remove('hidden');
+  viewHomePage();
+  displayCovers();
   addValuesToArray();
 }
 
